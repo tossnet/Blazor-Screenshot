@@ -1,0 +1,40 @@
+﻿@page "/"
+@inject IJSRuntime js;
+
+
+<h1>Hello, world!</h1>
+
+<p>This code use the html2canvas libraries https://html2canvas.hertzen.com/</p>
+<br />
+
+<img src="blazorday.png" />
+
+<canvas id="myCanvas"></canvas>
+
+<br />
+<button type="button" class="btn btn-success" @onclick="putToCanvas">Screenshot to Canvas</button> 
+<button type="button" class="btn btn-success" @onclick="DownloadScreenShot">Download Image</button> 
+<button type="button" class="btn btn-success" @onclick="GetData">Get to y Blob</button>    
+
+@data
+
+@code{
+    private string data { get; set; }
+
+    private async Task putToCanvas()
+    {
+        await js.InvokeVoidAsync("put2Canvas", "myCanvas");
+    }
+
+    private async Task DownloadScreenShot()
+    {
+        await js.InvokeVoidAsync("downloadScreenShot", "mypicture");
+    }
+
+    private async Task GetData()
+    {
+        data = await js.InvokeAsync<string>("getData");
+        StateHasChanged();
+    }
+    
+}
