@@ -1,4 +1,5 @@
 
+
 # Blazor-Screenshot
 How create a screenshot with a Blazor Application.
 
@@ -7,4 +8,4 @@ How create a screenshot with a Blazor Application.
 * download directly a screenshot 
 * get the DataURL to save the screenshot to a blob by example
 
-![blazor-screenshot](https://user-images.githubusercontent.com/3845786/124795341-371da700-df50-11eb-8641-9d68d9c637d9.png)
+![blazor-screenshot](https://user-images.githubusercontent.com/3845786/124796584-9f20bd00-df51-11eb-8fac-7f9012f1ea4c.gif)
